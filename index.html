@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcial Tomas Mollinedo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1><b>Nombre:</b> Tomas Mollinedo</h1>
+    <h2><b>DNI:</b> 45774449</h2>
+    <h2><b>Comision:</b> 2 - Pacheco</h2>
+    <div class="contenedor-formulario">
+        <form>
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" required><br>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" required><br>
+            <label for="dni">DNI</label>
+            <input type="text" id="dni" required><br>
+            <label for="fecha">Fecha de Nacimiento</label>
+            <input type="date" id="fecha" required><br>
+            <label for="email">Email</label>
+            <input type="email" id="email" required><br>
+            <button type="submit" onclick="validarFormulario(event)">Enviar formulario</button>
+            <button type="submit" class="boton-preguntas" onclick="hacerPreguntas(event)">Preguntas-Respuestas</button>
+            <p>Sus respuestas fueron: </p>
+            <div id="campo-respuestas" class="div-respuestas"></div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
