@@ -4,33 +4,33 @@ function validarFormulario(event){
     var apellido = document.getElementById("apellido").value;
     if(apellido.length < 1 || !isNaN(apellido)){
         alert("El apellido debe contener al menos un carácter y no puede ser un número.");
-        return false;
+        return;
     }
     //Validar que el nombre tenga caracteres y no digitos
     var nombre = document.getElementById("nombre").value;
     if(nombre.length < 1 || !isNaN(nombre)){
         alert("El nombre debe contener al menos un carácter y no puede ser un número.");
-        return false;
+        return;
     }
     //Validar que el DNI tenga solo numeros y una longitud de 8 digitos
     var dni = document.getElementById("dni").value;
     if(dni.length !== 8 || isNaN(dni)){
         alert("El DNI debe contener exactamente 8 dígitos numéricos.");
-        return false;
+        return;
     }
     //Validar que al fecha solo acepte superiores al año 2006
     var fecha = document.getElementById("fecha").value;
     var fechaObj = new Date(fecha);
     if(fechaObj.getFullYear() < 2006){
         alert("La fecha debe ser posterior al año 2006.");
-        return false;
+        return;
     }
 
     //Validar que el email tenga un formato correcto
     var email = document.getElementById("email").value;
     if (!email.includes("@") || !email.includes(".")) {
         alert("El email debe contener un '@' y un '.'");
-        return false;
+        return;
     }
 
     alert("¡Formulario enviado correctamente!");
